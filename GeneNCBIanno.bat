@@ -1,42 +1,44 @@
 @echo off
+chcp 65001
 :menu
 cls
 title YLCHEN Programs
 color 0e 
-echo	¨X¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨[
+echo	â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
 echo		NCBI Gene Summary                    
-echo	¨d¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨g
-echo		½â¾öÎÊÌâ£º
+echo	â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
+echo		è§£å†³é—®é¢˜ï¼š
 echo.   
-echo		Í¨¹ı»ùÒòÃû£¨Human Symbol£©ÅúÁ¿»ñÈ¡
-echo		»ùÒò½éÉÜºÍ×¢ÊÍĞÅÏ¢
+echo		é€šè¿‡åŸºå› åï¼ˆHuman Symbolï¼‰æ‰¹é‡è·å–
+echo		åŸºå› ä»‹ç»å’Œæ³¨é‡Šä¿¡æ¯
 echo.                         
-echo		1. ¿ªÊ¼ÔËĞĞ                        
-echo		2. ²é¿´ÏêÏ¸                         
-echo		3. ÍË³ö                         
-echo	¨^¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨a
+echo		1. å¼€å§‹è¿è¡Œ                        
+echo		2. æŸ¥çœ‹è¯¦ç»†                         
+echo		3. é€€å‡º                         
+echo	â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 echo.   
-echo Ô´ÂëµØÖ·£ºhttps://github.com/YLCHEN1992/GeneonlineAnnote
+echo æºç åœ°å€ï¼šhttps://github.com/YLCHEN1992/GeneonlineAnnote
 echo. 
-set /p choice=ÇëÊäÈëÑ¡ÏîºÅÂë: 
+set /p choice=è¯·è¾“å…¥é€‰é¡¹å·ç : 
 if "%choice%"=="1" (
     call Stargeneanno.bat
+    goto menu
 ) else if "%choice%"=="2" (
-echo 	1.×¼±¸CSV±í¸ñÎÄ¼ş£¬±íÍ·±ØĞëÓĞÒ»ÁĞÎªGenes±íÍ·£¬ÇÒGenesÎªÈËÖÖ»ùÒò±ê×¼Ğ´·¨£¨È«´óĞ´£©
-echo 	2.ĞèÒª»ùÒòID×¢ÊÍÎÄ¼ş Homo_sapiens.gene_info 
-echo  	 ÏÂÔØµØÖ·£ºhttps://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz
-echo 	   ½âÑ¹ºó·ÅÈë³ÌĞòÄ¿Â¼
-echo 	3.Õı×¼±¸Íê±Ïºó£¬ÔËĞĞ³ÌĞò£¬ÊäÈë±í¸ñÃû³Æ¼´¿É
-echo 	4.ĞèÒªÁªÍø£¬»ùÒòÏêÏ¸ĞÅÏ¢´¢´æÓÚnetcatÎÄ¼ş¼ĞÖĞ£¬Éú³ÉµÄgenesummary.csv¼´Îª»ùÒòsummaryĞÅÏ¢
-echo 	5.summaryÎªÔÚÏß×¥È¡£¬ÈçĞè»ñÈ¡×îĞÂsummaryĞèÒªÉ¾³ınetcatÎÄ¼ş¼ĞÖØĞÂÔÚÏß×¢ÊÍ
-echo 	6.×¢ÊÍ½á¹ûÖ÷Òª°üÀ¨summaryºÍ×ªÂ¼×é±í´ïÇé¿öÃèÊö£¬ĞèÒª°²×°R
-echo °´ÈÎÒâ¼ü·µ»Ø
+echo 	1.å‡†å¤‡CSVè¡¨æ ¼æ–‡ä»¶ï¼Œè¡¨å¤´å¿…é¡»æœ‰ä¸€åˆ—ä¸ºGenesè¡¨å¤´ï¼Œä¸”Genesä¸ºäººç§åŸºå› æ ‡å‡†å†™æ³•ï¼ˆå…¨å¤§å†™ï¼‰
+echo 	2.éœ€è¦åŸºå› IDæ³¨é‡Šæ–‡ä»¶ Homo_sapiens.gene_info 
+echo  	 ä¸‹è½½åœ°å€ï¼šhttps://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz
+echo 	   è§£å‹åæ”¾å…¥ç¨‹åºç›®å½•
+echo 	3.æ­£å‡†å¤‡å®Œæ¯•åï¼Œè¿è¡Œç¨‹åºï¼Œè¾“å…¥è¡¨æ ¼åç§°å³å¯
+echo 	4.éœ€è¦è”ç½‘ï¼ŒåŸºå› è¯¦ç»†ä¿¡æ¯å‚¨å­˜äºnetcatæ–‡ä»¶å¤¹ä¸­ï¼Œç”Ÿæˆçš„genesummary.csvå³ä¸ºåŸºå› summaryä¿¡æ¯
+echo 	5.summaryä¸ºåœ¨çº¿æŠ“å–ï¼Œå¦‚éœ€è·å–æœ€æ–°summaryéœ€è¦åˆ é™¤netcatæ–‡ä»¶å¤¹é‡æ–°åœ¨çº¿æ³¨é‡Š
+echo 	6.æ³¨é‡Šç»“æœä¸»è¦åŒ…æ‹¬summaryå’Œè½¬å½•ç»„è¡¨è¾¾æƒ…å†µæè¿°ï¼Œéœ€è¦å®‰è£…R
+echo æŒ‰ä»»æ„é”®è¿”å›
 pause >nul
 goto menu
 ) else if "%choice%"=="3" (
     exit
 ) else (
-    echo ÎŞĞ§µÄÑ¡Ïî£¬ÇëÖØĞÂÊäÈë¡£
+    echo æ— æ•ˆçš„é€‰é¡¹ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚
     pause
     goto menu
 )
